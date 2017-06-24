@@ -1,0 +1,13 @@
+.center {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    color: aqua
+}
+
+body {
+  background-color: grey;
+  color: black;
+  font-family: Verdana;
+  text-align: Center;
+}

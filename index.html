@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Black Metal</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+<div class="center">
+<button id="btn" style="width:300px;height:30px;" onclick="NewMetalName()">
+    Your Metal Song Name is...</button>
+
+<p id="metal"></p>
+
+<img src="https://blackmetalsongs.neocities.org/Horns.gif" alt="horns">
+
+</div>
+
+<script>
+
+       var numbers = [1,2,3,4];
+
+       function shuffle(array) {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+
+                // Pick a remaining element...
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+
+                // And swap it with the current element.
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+                }
+
+                return array;
+            }
+
+
+       function NewMetalName() {
+           if (shuffle(numbers)[0] == 1)
+                {
+            arr = shuffle(arr1)[0] + " "+ shuffle(arr3)[0] + " "+ shuffle(arr4)[0]  + " "+ shuffle(arr5)[0];
+                }
+           else if (shuffle(numbers)[0] == 2)
+               {
+                    arr = shuffle(arr1)[0] + " "+ shuffle(arr3)[0] + " " + shuffle(arr5)[0];
+                }
+           else if (shuffle(numbers)[0] == 3)
+               {
+                    arr = shuffle(arr2)[0] + " "+ shuffle(arr3)[0] + " " + shuffle(arr4)[0]  + " " + shuffle(arr5)[0];
+               }
+           else {
+               arr = shuffle(arr2)[0] + " "+ shuffle(arr3)[0] + " " + shuffle(arr5)[0];
+           }
+            document.getElementById("metal").innerHTML = arr;
+}
+
+
+</script>
+
+<a href="#" id="get-data">Get JSON data</a>
+ <div id="show-data"></div>
+ <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+ <script src="example.js"></script>
+
+</body>
+</html>
