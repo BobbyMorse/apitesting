@@ -1,8 +1,9 @@
-.center {
+.coins {
     margin: auto;
     width: 60%;
     padding: 10px;
-    color: aqua
+    color: black
+    text-align: Center
 }
 
 body {
@@ -10,4 +11,20 @@ body {
   color: black;
   font-family: Verdana;
   text-align: Center;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+}
+
+h1 {
+    font-size:  250%;
 }

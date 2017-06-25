@@ -1,74 +1,120 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Black Metal</title>
+<title>Coin Market Data</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+<h1>COIN TWEETS</h1>    
+    
 </head>
 
 <body>
+    
+    
+    <!-- FIRST RANKED -->
+    
+    
+<div id="first" align="center">
+    
+<p>
+<table>
+            <tr>
+                <th bgcolor="#C0C0C0">Name</th>
+                <th bgcolor="#C0C0C0">Price</th>
+                <th bgcolor="#C0C0C0">1 hr change</th>
+                <th bgcolor="#C0C0C0">24 hr change</th>
+            </tr>
+            <tr>
+                <td bgcolor="#C0C0C0"><div id ="BTCName"></div></td>
+                <td bgcolor="#C0C0C0"><div id ="BTCPriceUSD"></div></td>
+                <td bgcolor="#C0C0C0"><div id ="BTCPctChg1hr"></div></td>
+                <td bgcolor="#C0C0C0"><div id ="BTCPctChg7day"></div></td>
+            </tr>
+</table>
+</p>
+</div>
 
-
-<div class="center">
-<button id="btn" style="width:300px;height:30px;" onclick="NewMetalName()">
-    Your Metal Song Name is...</button>
-
-<p id="metal"></p>
-
-<img src="https://blackmetalsongs.neocities.org/Horns.gif" alt="horns">
+    <!-- TWITTER -->
+    
+<div id="secondtweets" align="center">
+        <br>
+    <a class="twitter-timeline" href="https://twitter.com/hashtag/bitcoin"
+       data-width="500"
+        data-height="500"
+       data-widget-id="878717837577203712">#bitcoin Tweets</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 </div>
 
+
+    <!-- SECOND RANKED -->
+    
+    
+<br> 
+<div id="second" align="center">
+<p>
+<table> 
+            <tr>
+                <th bgcolor="#C0C0C0">Name</th>
+                <th bgcolor="#C0C0C0">Price</th>
+                <th bgcolor="#C0C0C0">1 hr change</th>
+                <th bgcolor="#C0C0C0">24 hr change</th>
+            </tr>
+           <tr>
+                <td bgcolor="#C0C0C0"><div id ="ETHName"></div></td>
+                <td bgcolor="#C0C0C0"><div id ="ETHPriceUSD"></div></td>
+                <td bgcolor="#C0C0C0"><div id ="ETHPctChg1hr"></div></td>
+                <td bgcolor="#C0C0C0"><div id ="ETHPctChg7day"></div></td>
+            </tr>
+    </table>
+
+    </p>
+</div>
+
+<br>
+
+    <!-- TWITTER -->
+
+<div id="secondtweets" align="center">
+
+    <a class="twitter-timeline" href="https://twitter.com/hashtag/ethereum"
+       data-width="500"
+  data-height="500"
+    data-widget-id="878719146166546435">#ethereum Tweets</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    
+</div>
+    
+    
+    
+    
 <script>
-
-       var numbers = [1,2,3,4];
-
-       function shuffle(array) {
-        var currentIndex = array.length, temporaryValue, randomIndex;
-
-        // While there remain elements to shuffle...
-        while (0 !== currentIndex) {
-
-                // Pick a remaining element...
-                randomIndex = Math.floor(Math.random() * currentIndex);
-                currentIndex -= 1;
-
-                // And swap it with the current element.
-                temporaryValue = array[currentIndex];
-                array[currentIndex] = array[randomIndex];
-                array[randomIndex] = temporaryValue;
-                }
-
-                return array;
-            }
-
-
-       function NewMetalName() {
-           if (shuffle(numbers)[0] == 1)
-                {
-            arr = shuffle(arr1)[0] + " "+ shuffle(arr3)[0] + " "+ shuffle(arr4)[0]  + " "+ shuffle(arr5)[0];
-                }
-           else if (shuffle(numbers)[0] == 2)
-               {
-                    arr = shuffle(arr1)[0] + " "+ shuffle(arr3)[0] + " " + shuffle(arr5)[0];
-                }
-           else if (shuffle(numbers)[0] == 3)
-               {
-                    arr = shuffle(arr2)[0] + " "+ shuffle(arr3)[0] + " " + shuffle(arr4)[0]  + " " + shuffle(arr5)[0];
-               }
-           else {
-               arr = shuffle(arr2)[0] + " "+ shuffle(arr3)[0] + " " + shuffle(arr5)[0];
-           }
-            document.getElementById("metal").innerHTML = arr;
-}
-
+    
+var ourRequest = new XMLHttpRequest();
+    ourRequest.open('GET', 'https://api.coinmarketcap.com/v1/ticker/?limit=10')
+    ourRequest.onload = function() {
+        var ourData = JSON.parse(ourRequest.responseText);
+        console.log(ourData[0]);
+        
+        //top dog
+        document.getElementById("BTCName").innerHTML = ourData[0].name
+        document.getElementById("BTCPriceUSD").innerHTML = ourData[0].price_usd
+        document.getElementById("BTCPctChg1hr").innerHTML = ourData[0].percent_change_1h + '%'
+        document.getElementById("BTCPctChg7day").innerHTML = ourData[0].percent_change_7d + '%'
+        
+        //second
+        document.getElementById("ETHName").innerHTML = ourData[1].name
+        document.getElementById("ETHPriceUSD").innerHTML = ourData[1].price_usd
+        document.getElementById("ETHPctChg1hr").innerHTML = ourData[1].percent_change_1h + '%'
+        document.getElementById("ETHPctChg7day").innerHTML = ourData[1].percent_change_7d + '%'
+    }
+    
+    ourRequest.send();
 
 </script>
-
-<a href="#" id="get-data">Get JSON data</a>
- <div id="show-data"></div>
- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
- <script src="example.js"></script>
+     
+    
 
 </body>
 </html>
