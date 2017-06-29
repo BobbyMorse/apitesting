@@ -15,15 +15,14 @@
     <!-- FIRST RANKED -->
     
     
-<div id="first" align="center">
-    
-<p>
+<div id="first">
+
 <table>
             <tr>
                 <th bgcolor="#C0C0C0">Name</th>
                 <th bgcolor="#C0C0C0">Price</th>
-                <th bgcolor="#C0C0C0">1 hr change</th>
-                <th bgcolor="#C0C0C0">24 hr change</th>
+                <th bgcolor="#C0C0C0">1 hr</th>
+                <th bgcolor="#C0C0C0">24 hr</th>
             </tr>
             <tr>
                 <td bgcolor="#C0C0C0"><div id ="BTCName"></div></td>
@@ -32,16 +31,15 @@
                 <td bgcolor="#C0C0C0"><div id ="BTCPctChg7day"></div></td>
             </tr>
 </table>
-</p>
 </div>
 
     <!-- TWITTER -->
-    
-<div id="secondtweets" align="center">
-        <br>
+<br>
+<div id="firsttweets" class="firsttweets">
+
     <a class="twitter-timeline" href="https://twitter.com/hashtag/bitcoin"
-       data-width="500"
-        data-height="500"
+        data-width="300"
+        data-height="300"
        data-widget-id="878717837577203712">#bitcoin Tweets</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
@@ -52,14 +50,13 @@
     
     
 <br> 
-<div id="second" align="center">
-<p>
+<div id="second">
 <table> 
             <tr>
                 <th bgcolor="#C0C0C0">Name</th>
                 <th bgcolor="#C0C0C0">Price</th>
-                <th bgcolor="#C0C0C0">1 hr change</th>
-                <th bgcolor="#C0C0C0">24 hr change</th>
+                <th bgcolor="#C0C0C0">1 hr</th>
+                <th bgcolor="#C0C0C0">24 hr</th>
             </tr>
            <tr>
                 <td bgcolor="#C0C0C0"><div id ="ETHName"></div></td>
@@ -68,8 +65,6 @@
                 <td bgcolor="#C0C0C0"><div id ="ETHPctChg7day"></div></td>
             </tr>
     </table>
-
-    </p>
 </div>
 
 <br>
@@ -79,9 +74,10 @@
 <div id="secondtweets" align="center">
 
     <a class="twitter-timeline" href="https://twitter.com/hashtag/ethereum"
-       data-width="500"
-  data-height="500"
-    data-widget-id="878719146166546435">#ethereum Tweets</a>
+       data-width="300"
+  data-height="300"
+    data-widget-id="878719146166546435"
+       >#ethereum Tweets</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     
 </div>
@@ -101,13 +97,13 @@ var ourRequest = new XMLHttpRequest();
         document.getElementById("BTCName").innerHTML = ourData[0].name
         document.getElementById("BTCPriceUSD").innerHTML = ourData[0].price_usd
         document.getElementById("BTCPctChg1hr").innerHTML = ourData[0].percent_change_1h + '%'
-        document.getElementById("BTCPctChg7day").innerHTML = ourData[0].percent_change_7d + '%'
+        document.getElementById("BTCPctChg7day").innerHTML = ourData[0].percent_change_24h + '%'
         
         //second
         document.getElementById("ETHName").innerHTML = ourData[1].name
         document.getElementById("ETHPriceUSD").innerHTML = ourData[1].price_usd
         document.getElementById("ETHPctChg1hr").innerHTML = ourData[1].percent_change_1h + '%'
-        document.getElementById("ETHPctChg7day").innerHTML = ourData[1].percent_change_7d + '%'
+        document.getElementById("ETHPctChg7day").innerHTML = ourData[1].percent_change_24h + '%'
     }
     
     ourRequest.send();
