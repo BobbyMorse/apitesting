@@ -1,287 +1,86 @@
 <!DOCTYPE html>
 <html>
-<div class="container-fluid">   
 <head>
 <title>Coin Market Data</title>
 <link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  
     
-<div class="header1 jumbotron">
-    <h1>COIN TWEETS</h1> 
-    <h2>Monitoring price and social media data</h2>
-</div>
-      
+<h1>COIN TWEETS</h1>    
     
 </head>
 
 <body>
     
     
-    <!-- Begin First Row-->
-    
     <!-- FIRST RANKED -->
     
-<div class="row">
-    <div class="col-md-4 table-responsive first">
-        <table class="table">
-            <tr>
-                <th>Name</th>
-                <th>Price</th>
-                <th>1 hr</th>
-                <th>24 hr</th>
-            </tr>
-            <tr>
-                <td><div id ="1Name"></div></td>
-                <td><div id ="1PriceUSD"></div></td>
-                <td><div id ="1PctChg1hr"></div></td>
-                <td><div id ="1PctChg7day"></div></td>
-            </tr>
-        </table>
+    
+<div id="first">
 
+<table>
+            <tr>
+                <th bgcolor="#C0C0C0">Name</th>
+                <th bgcolor="#C0C0C0">Price</th>
+                <th bgcolor="#C0C0C0">1 hr</th>
+                <th bgcolor="#C0C0C0">24 hr</th>
+            </tr>
+            <tr>
+                <td bgcolor="#C0C0C0"><div id ="BTCName"></div></td>
+                <td bgcolor="#C0C0C0"><div id ="BTCPriceUSD"></div></td>
+                <td bgcolor="#C0C0C0"><div id ="BTCPctChg1hr"></div></td>
+                <td bgcolor="#C0C0C0"><div id ="BTCPctChg7day"></div></td>
+            </tr>
+</table>
+</div>
 
     <!-- TWITTER -->
-     <a class="twitter-timeline" href="https://twitter.com/hashtag/bitcoin" data-widget-id="882300166790893569" 
-               data-width="300"
-                data-height="300">#bitcoin Tweets</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-        </script>
-     
-    </div>
+<br>
+<div id="firsttweets" class="firsttweets">
+
+    <a class="twitter-timeline" href="https://twitter.com/hashtag/bitcoin"
+        data-width="300"
+        data-height="300"
+       data-widget-id="878717837577203712">#bitcoin Tweets</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+</div>
 
 
     <!-- SECOND RANKED -->
     
     
-    <div class="col-md-4 table-responsive second">
-            <table class="table"> 
-                <tr>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>1 hr</th>
-                    <th>24 hr</th>
-                </tr>
-                <tr>
-                    <td><div id ="ETHName"></div></td>
-                    <td><div id ="ETHPriceUSD"></div></td>
-                    <td><div id ="ETHPctChg1hr"></div></td>
-                    <td><div id ="ETHPctChg7day"></div></td>
-                </tr>
-            </table>
-
-        <!-- TWITTER -->
-        
-            <a class="twitter-timeline" href="https://twitter.com/hashtag/ethereum"
-               data-width="300"
-                data-height="300"
-                data-widget-id="878719146166546435"
-                >#ethereum</a>
-                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    
-    </div>
-    
-    <!-- Third Ranked -->
-    
-    <div class="col-md-4 table-responsive third">
-            <table class="table"> 
-                <tr>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>1 hr</th>
-                    <th>24 hr</th>
-                </tr>
-                <tr>
-                    <td><div id ="RIPName"></div></td>
-                    <td><div id ="RIPPriceUSD"></div></td>
-                    <td><div id ="RIPPctChg1hr"></div></td>
-                    <td><div id ="RIPPctChg7day"></div></td>
-                </tr>
-            </table>
-
-
-    <!-- Twitter Third -->
-
-           <a class="twitter-timeline" href="https://twitter.com/hashtag/ripple" data-widget-id="882300610707681281"
-               data-width="300"
-                data-height="300">#ripple Tweets</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    </div>
-</div> 
-
-<!-- END FIRST ROW-->
-    
-
-<!-- BEGIN SECOND ROW-->
-    
-    <div class="col-md-4 table-responsive fourth">
-        <table class="table">
+<br> 
+<div id="second">
+<table> 
             <tr>
-                <th>Name</th>
-                <th>Price</th>
-                <th>1 hr</th>
-                <th>24 hr</th>
+                <th bgcolor="#C0C0C0">Name</th>
+                <th bgcolor="#C0C0C0">Price</th>
+                <th bgcolor="#C0C0C0">1 hr</th>
+                <th bgcolor="#C0C0C0">24 hr</th>
             </tr>
-            <tr>
-                <td><div id ="LTCName"></div></td>
-                <td><div id ="LTCPriceUSD"></div></td>
-                <td><div id ="LTCPctChg1hr"></div></td>
-                <td><div id ="LTCPctChg7day"></div></td>
+           <tr>
+                <td bgcolor="#C0C0C0"><div id ="ETHName"></div></td>
+                <td bgcolor="#C0C0C0"><div id ="ETHPriceUSD"></div></td>
+                <td bgcolor="#C0C0C0"><div id ="ETHPctChg1hr"></div></td>
+                <td bgcolor="#C0C0C0"><div id ="ETHPctChg7day"></div></td>
             </tr>
-        </table>
+    </table>
+</div>
 
+<br>
 
     <!-- TWITTER -->
-           <a class="twitter-timeline" href="https://twitter.com/hashtag/litecoin" data-widget-id="882302000733585409"
-              data-width="300"
-               data-height="300">#litecoin Tweets</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    </div>
 
+<div id="secondtweets" align="center">
 
-    <!-- Fifth RANKED -->
+    <a class="twitter-timeline" href="https://twitter.com/hashtag/ethereum"
+       data-width="300"
+  data-height="300"
+    data-widget-id="878719146166546435"
+       >#ethereum Tweets</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     
-    
-    <div class="col-md-4 table-responsive fifth">
-            <table class="table"> 
-                <tr>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>1 hr</th>
-                    <th>24 hr</th>
-                </tr>
-                <tr>
-                    <td><div id ="ETCName"></div></td>
-                    <td><div id ="ETCPriceUSD"></div></td>
-                    <td><div id ="ETCPctChg1hr"></div></td>
-                    <td><div id ="ETCPctChg7day"></div></td>
-                </tr>
-            </table>
-
-        <!-- TWITTER -->
-        
-        <a class="twitter-timeline" href="https://twitter.com/hashtag/ethereumclassic" data-widget-id="882301030234566657"
-              data-width="300"
-               data-height="300">#ethereumclassic Tweets</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    
-    </div>
-    
-    <!-- 6th Ranked -->
-    
-    <div class="col-md-4 table-responsive sixth">
-            <table class="table"> 
-                <tr>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>1 hr</th>
-                    <th>24 hr</th>
-                </tr>
-                <tr>
-                    <td><div id ="NEMName"></div></td>
-                    <td><div id ="NEMPriceUSD"></div></td>
-                    <td><div id ="NEMPctChg1hr"></div></td>
-                    <td><div id ="NEMPctChg7day"></div></td>
-                </tr>
-            </table>
-
-
-    <!-- Twitter Third -->
-
-          <a class="twitter-timeline" href="https://twitter.com/hashtag/nem" data-widget-id="882294667919970306" 
-              data-width="300"
-               data-height="300">#nem Tweets</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        
-    </div>
-    
-
-<!-- BEGIN THIRD ROW-->
-    
-    <div class="col-md-4 table-responsive seventh">
-        <table class="table">
-            <tr>
-                <th>Name</th>
-                <th>Price</th>
-                <th>1 hr</th>
-                <th>24 hr</th>
-            </tr>
-            <tr>
-                <td><div id ="DASHName"></div></td>
-                <td><div id ="DASHPriceUSD"></div></td>
-                <td><div id ="DASHPctChg1hr"></div></td>
-                <td><div id ="DASHPctChg7day"></div></td>
-            </tr>
-        </table>
-
-
-    <!-- TWITTER -->
-        
-<a class="twitter-timeline" href="https://twitter.com/hashtag/dash" data-widget-id="882725673630126080" 
-              data-width="300"
-               data-height="300">#dash Tweets</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        
-    </div>
-
-
-    <!-- Eigth RANKED -->
-    
-    
-    <div class="col-md-4 table-responsive eight">
-            <table class="table"> 
-                <tr>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>1 hr</th>
-                    <th>24 hr</th>
-                </tr>
-                <tr>
-                    <td><div id ="IOTAName"></div></td>
-                    <td><div id ="IOTAPriceUSD"></div></td>
-                    <td><div id ="IOTAPctChg1hr"></div></td>
-                    <td><div id ="IOTAPctChg7day"></div></td>
-                </tr>
-            </table>
-
-        <!-- TWITTER -->
-<a class="twitter-timeline" href="https://twitter.com/hashtag/iota" data-widget-id="882725372089028610" 
-              data-width="300"
-               data-height="300">#iota Tweets</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    
-    </div>
-    
-    <!-- 9th Ranked -->
-    
-    <div class="col-md-4 table-responsive ninth">
-            <table class="table"> 
-                <tr>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>1 hr</th>
-                    <th>24 hr</th>
-                </tr>
-                <tr>
-                    <td><div id ="BTSName"></div></td>
-                    <td><div id ="BTSPriceUSD"></div></td>
-                    <td><div id ="BTSPctChg1hr"></div></td>
-                    <td><div id ="BTSPctChg7day"></div></td>
-                </tr>
-            </table>
-
-
-    <!-- Twitter Third -->
-  
-    
-    <a class="twitter-timeline" href="https://twitter.com/hashtag/monero" data-widget-id="882725477772918784" 
-              data-width="300"
-               data-height="300">#monero Tweets</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-</div> 
-
-<!-- END SECOND ROW-->
-    
+</div>
     
     
     
@@ -295,52 +94,16 @@ var ourRequest = new XMLHttpRequest();
         console.log(ourData[0]);
         
         //top dog
-        document.getElementById("1Name").innerHTML = ourData[0].name
-        document.getElementById("1PriceUSD").innerHTML = ourData[0].price_usd
-        document.getElementById("1PctChg1hr").innerHTML = ourData[0].percent_change_1h + '%'
-        document.getElementById("1PctChg7day").innerHTML = ourData[0].percent_change_24h + '%'
+        document.getElementById("BTCName").innerHTML = ourData[0].name
+        document.getElementById("BTCPriceUSD").innerHTML = ourData[0].price_usd
+        document.getElementById("BTCPctChg1hr").innerHTML = ourData[0].percent_change_1h + '%'
+        document.getElementById("BTCPctChg7day").innerHTML = ourData[0].percent_change_24h + '%'
         
         //second
         document.getElementById("ETHName").innerHTML = ourData[1].name
         document.getElementById("ETHPriceUSD").innerHTML = ourData[1].price_usd
         document.getElementById("ETHPctChg1hr").innerHTML = ourData[1].percent_change_1h + '%'
         document.getElementById("ETHPctChg7day").innerHTML = ourData[1].percent_change_24h + '%'
-        
-        //third
-        document.getElementById("RIPName").innerHTML = ourData[2].name
-        document.getElementById("RIPPriceUSD").innerHTML = ourData[2].price_usd
-        document.getElementById("RIPPctChg1hr").innerHTML = ourData[2].percent_change_1h + '%'
-        document.getElementById("RIPPctChg7day").innerHTML = ourData[2].percent_change_24h + '%'
-        
-        document.getElementById("LTCName").innerHTML = ourData[3].name
-        document.getElementById("LTCPriceUSD").innerHTML = ourData[3].price_usd
-        document.getElementById("LTCPctChg1hr").innerHTML = ourData[3].percent_change_1h + '%'
-        document.getElementById("LTCPctChg7day").innerHTML = ourData[3].percent_change_24h + '%'
-
-        document.getElementById("ETCName").innerHTML = ourData[4].name
-        document.getElementById("ETCPriceUSD").innerHTML = ourData[4].price_usd
-        document.getElementById("ETCPctChg1hr").innerHTML = ourData[4].percent_change_1h + '%'
-        document.getElementById("ETCPctChg7day").innerHTML = ourData[4].percent_change_24h + '%'
-        
-        document.getElementById("NEMName").innerHTML = ourData[5].name
-        document.getElementById("NEMPriceUSD").innerHTML = ourData[5].price_usd
-        document.getElementById("NEMPctChg1hr").innerHTML = ourData[5].percent_change_1h + '%'
-        document.getElementById("NEMPctChg7day").innerHTML = ourData[5].percent_change_24h + '%'
-                
-        document.getElementById("DASHName").innerHTML = ourData[6].name
-        document.getElementById("DASHPriceUSD").innerHTML = ourData[6].price_usd
-        document.getElementById("DASHPctChg1hr").innerHTML = ourData[6].percent_change_1h + '%'
-        document.getElementById("DASHPctChg7day").innerHTML = ourData[6].percent_change_24h + '%'
-
-        document.getElementById("IOTAName").innerHTML = ourData[7].name
-        document.getElementById("IOTAPriceUSD").innerHTML = ourData[7].price_usd
-        document.getElementById("IOTAPctChg1hr").innerHTML = ourData[7].percent_change_1h + '%'
-        document.getElementById("IOTAPctChg7day").innerHTML = ourData[7].percent_change_24h + '%'
-        
-        document.getElementById("BTSName").innerHTML = ourData[8].name
-        document.getElementById("BTSPriceUSD").innerHTML = ourData[8].price_usd
-        document.getElementById("BTSPctChg1hr").innerHTML = ourData[8].percent_change_1h + '%'
-        document.getElementById("BTSPctChg7day").innerHTML = ourData[8].percent_change_24h + '%'
     }
     
     ourRequest.send();
@@ -350,5 +113,4 @@ var ourRequest = new XMLHttpRequest();
     
 
 </body>
-</div>
 </html>
