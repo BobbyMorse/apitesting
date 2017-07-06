@@ -1,30 +1,40 @@
-.coins {
-    margin: auto;
-    width: 60%;
-    padding: 10px;
-    color: black
-    text-align: Center
-}
-
 body {
-  background-color: grey;
+  background-color: azure;
   color: black;
   font-family: Verdana;
   text-align: Center;
 }
 
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+.header1{
+    position: relative !important;
+    padding: 50px !important;
+    font-size: 500px !important;
+    font-weight: 500px !important;
+    color: midnightblue!important;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-td, th {
-    border: 1px solid black;
+
+
+
+/*td, th {
+    border: 3px solid black;
     text-align: center;
-    padding: 8px;
-}
+    padding: 20px;
+    background-color: aquamarine
+}*/
 
-h1 {
-    font-size:  250%;
+/*.first {
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
 }
+    
+.second {
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+}*/
+
